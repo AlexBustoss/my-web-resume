@@ -1,6 +1,11 @@
+
 .App {
+  min-height: 100vh; /* Asegura que el contenedor principal tenga al menos la altura de la ventana del navegador */
+  position: relative; /* Establece una posición de referencia para el pie de página posicionado de manera absoluta */
+  padding-bottom: 60px; /* Reserva espacio para el pie de página. Ajusta según la altura de tu pie de página */
   text-align: center;
 }
+
 
 .App-logo {
   height: 40vmin;

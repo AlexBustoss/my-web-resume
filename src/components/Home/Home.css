@@ -6,32 +6,28 @@
   }
   
   .hero-section {
-    background: url('../../../public/image.JPG') no-repeat center center;
-    background-size: cover;
-    color: #fff;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+    padding: 50px 20px;
   }
   
-  .hero-text {
-    padding: 20px;
-    max-width: 600px;
-    background-color: rgba(0, 0, 0, 0.7); /* Sutil transparencia */
+  .hero-image {
+    background: url('../../../public/image.JPG') no-repeat center center; /* Asegúrate de que 'image.JPG' es el nombre correcto del archivo en tu directorio 'public' */
+    background-size: cover;
+    height: 50vh; /* Esto controla la altura de la sección de la imagen. Ajústalo según tus necesidades. */
+    width: 100%;
+    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
   }
   
-  .hero-text h1 {
+  .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    color: #333; /* O el color que prefieras para los títulos */
   }
   
-  .hero-text p {
+  .hero-content p {
     font-size: 1.5rem;
     margin-bottom: 20px;
+    color: #555; /* O el color que prefieras para el texto */
   }
   
   .buttons {
@@ -52,4 +48,222 @@
   .cta:hover {
     background-color: #fcb800;
   }
-  
+
+  /* Estilos para el contenedor del intro */
+
+  .intro-section {
+    padding: 100px 15px;
+    text-align: center;
+    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+
+.intro-name {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro-title {
+    margin-bottom: 25px;
+    color: #555;
+    font-size: 1.8em;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.intro-description {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin-bottom: 35px;
+    transition: color 0.3s ease-in-out;
+}
+
+.intro-description:hover {
+    color: #333;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 50px; /* Botón con bordes completamente redondeados */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    color: #fff;
+    background-color: #333; /* color de fondo inicial */
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif; /* esto utiliza la fuente Roboto, asegúrate de tenerla importada en tu archivo HTML */
+    font-size: 1.1em; /* ajusta el tamaño de la fuente */
+    font-weight: 500; /* esto hará que el texto sea semi-negrita */
+    letter-spacing: 1.2px; /* esto define el espacio entre letras */
+    text-transform: uppercase; /* esto convierte el texto a mayúsculas */
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    outline: none;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #fafaf7; /* color de fondo al pasar el mouse */
+    color: #333; /* color del texto al pasar el mouse */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Opcional: puedes agregar un efecto de "focus" para cuando el botón esté seleccionado */
+.cta-button:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* crea un contorno de enfoque amarillo suave */
+}
+
+
+
+/* Skills */
+
+.skills-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.skills-section h2 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.skills-section h2::after {
+    content: '';
+    width: 100px;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ffeb3b; /* color amarillo */
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* espacio entre las tarjetas */
+}
+
+.skill-card {
+    height: 200px; /* Define una altura */
+    width: 150px; /* Define una anchura */
+    margin-bottom: 20px; /* Espacio entre la tarjeta y el siguiente elemento */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12); /* Sombra */
+    transition: all 0.3s ease-in-out; /* Transición suave para hover */
+    color: #fff; /* Color de texto */
+    position: relative; /* Necesario para posicionar el contenido correctamente */
+    overflow: hidden; /* Asegura que nada se desborde */
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+.skill-card.python {
+    background-image: url('../../../public/Python.png'); /* Asegúrate de que el camino a tu imagen sea correcto */
+}
+
+.skill-content {
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro para legibilidad */
+    position: absolute; /* Posicionamiento respecto al padre */
+    top: 0; left: 0; right: 0; bottom: 0; /* Ocupa todo el espacio del padre */
+    display: flex; /* Centra el contenido */
+    flex-direction: column; /* Organiza los hijos en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    padding: 20px; /* Espacio alrededor del contenido */
+    text-align: center; /* Alinea el texto */
+}
+
+.skill-icon-wrapper {
+    width: 70px; /* Ajustado para un mejor aspecto visual */
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.skill-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.skill-icon-wrapper:hover .skill-icon {
+    transform: scale(1.1);
+}
+
+.skill-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-7px);
+}
+
+.skill-name {
+    color: #333;
+    margin: 10px 0 5px 0;
+}
+
+.skill-level {
+    font-size: 0.85em;
+    color: #777;
+}
