@@ -1,5 +1,6 @@
 // src/App.js
 import React from 'react';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';

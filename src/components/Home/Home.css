@@ -214,24 +214,44 @@
     overflow: hidden; /* Asegura que nada se desborde */
     background-size: cover; /* Hace que la imagen de fondo cubra todo el contenedor */
     background-position: center; /* Centra la imagen de fondo */
+    text-align: center; /* Centra el texto */
+    position: relative;
+    padding-bottom: 0; /* Añade espacio en la parte inferior para el texto */
+
 }
 
 .skill-card.python {
     background-image: url('../../../public/Python.png'); /* Asegúrate de que el camino a tu imagen sea correcto */
 }
 
-.skill-content {
-    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro para legibilidad */
-    position: absolute; /* Posicionamiento respecto al padre */
-    top: 0; left: 0; right: 0; bottom: 0; /* Ocupa todo el espacio del padre */
-    display: flex; /* Centra el contenido */
-    flex-direction: column; /* Organiza los hijos en columna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    padding: 20px; /* Espacio alrededor del contenido */
-    text-align: center; /* Alinea el texto */
+.skill-card.javascript {
+    background-image: url('../../../public/JavaScript.png');
 }
 
+.skill-card.react-native {
+    background-image: url('../../../public/ReactNative.png');
+}
+
+.skill-card.html-css {
+    background-image: url('../../../public/HTML:CSS.jpg');
+}
+
+.skill-card.java {
+    background-image: url('../../../public/Java.png');
+}
+
+.skill-card.sql {
+    background-image: url('../../../public/SQL.png');
+}
+
+
+
+
+.skill-content {
+    height: 100%; /* Asegurarte de que ocupa todo el espacio vertical disponible */
+    width: 100%; /* Asegurarte de que ocupa todo el espacio horizontal disponible */
+}
+ 
 .skill-icon-wrapper {
     width: 70px; /* Ajustado para un mejor aspecto visual */
     height: 70px;
@@ -266,4 +286,156 @@
 .skill-level {
     font-size: 0.85em;
     color: #777;
+}
+
+
+.skill-text {
+    position: relative; /* Cambia a relative */
+    transform: none; /* Remover transformación */
+    top: 0; /* Posición top a 0 */
+    padding: 10px 0; /* Añadir padding arriba y abajo */
+    background: none; /* Elimina el fondo si lo prefieres */
+    color: #333; /* Añadir color al texto */
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco con un poco de transparencia */
+    padding: 10px; /* Espacio alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+
+.skill-name {
+    color: #333; /* Color oscuro para contraste */
+    margin: 5px 0; /* Espacio entre nombre y nivel */
+    font-size: 1.2em; /* Aumentar el tamaño de la fuente */
+    font-weight: 700; /* Hacer el texto en negrita */
+    letter-spacing: 1px; /* Aumentar el espaciado entre letras */
+    text-transform: uppercase; /* Transformar el texto a mayúsculas */
+
+}
+
+.skill-level {
+    font-size: 0.85em;
+    color: rgb(5, 4, 4);  
+}
+
+
+/* Educación */
+
+
+.education-section {
+    text-align: center;
+    background-color: #f1f1f1; /* Color de fondo suave */
+    padding: 40px 20px; /* Espaciado superior e inferior */
+}
+
+.education-section h2 {
+    font-size: 2em; /* Ajusta el tamaño de la fuente */
+    font-weight: bold; /* Hace la fuente más gruesa */
+    color: #333; /* Color oscuro para mejor contraste y legibilidad */
+    margin-bottom: 20px; /* Añade espacio debajo del título */
+    text-align: center; /* Centra el texto */
+}
+
+.education-section h2:after {
+    content: "";
+    display: block;
+    width: 50px; /* Ajusta la anchura de la línea */
+    height: 2px; /* Ajusta el grosor de la línea */
+    background-color: #333; /* Color de la línea */
+    margin: 10px auto 0; /* Centra la línea debajo del título */
+}
+
+.education-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.education-logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.education-info h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.education-info p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); }
+    to { transform: scale(1); }
+}
+
+
+.education-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap; /* Asegura que los elementos se ajusten en pantallas más pequeñas */
+    animation: fadeIn 0.8s ease-out, zoomIn 0.8s ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.tec-image, .education-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px; /* O el tamaño que prefieras */
+    width: 100px; /* O el tamaño que prefieras */
+}
+
+
+.education-info {
+    flex-basis: 70%; /* Ajusta este valor según sea necesario */
+    padding-left: 20px;
+}
+
+
+.education-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tec-image {
+    background: url('../../../public/Tec.png') no-repeat center center;
+    background-size: cover;
+    height: 100px;  /* Ajusta según sea necesario */
+    width: 15%;
+    margin-bottom: 20px;
+    max-height: 100%;
+    max-width: 100%;
 }
