@@ -193,7 +193,8 @@ const ProjectCard = ({
           {scope && (
             <Section>
               <Subtitle>Alcance</Subtitle>
-              <Text>{scope}</Text>
+              <Text>{scope="Este proyecto se centra en el desarrollo de un sistema de gestión de inventario para CEDAIN, con el objetivo de mejorar la eficiencia operativa y la gestión de recursos en sus dos ubicaciones principales. Incluirá funcionalidades para el registro y seguimiento de entradas y salidas, herramientas analíticas para predicciones de stock, y un sistema de alertas para bajo inventario. El sistema será accesible como una aplicación web, garantizando su uso en diversos dispositivos y enfocándose en la seguridad y la usabilidad."}</Text>
+
             </Section>
           )}
           {riskMatrix && (
