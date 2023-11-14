@@ -13,6 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
   
   .header-logo a {
@@ -40,7 +41,7 @@
     position: relative;
     padding-bottom: 5px; /* Espacio para el subrayado */
     font-weight: 700; /* para texto en negrita */
-    font-size: 25px; /* o cualquier otro tamaño que prefieras */
+    font-size: 22px; /* o cualquier otro tamaño que prefieras */
     text-transform: uppercase; /* hace que todo el texto esté en mayúsculas */
     letter-spacing: 2px; /* añade espacio entre letras */
     color: #fed136; /* o cualquier otro color que se ajuste al diseño de tu sitio web */
@@ -84,3 +85,72 @@
   .active-link {
     color: #FFD700; /* o cualquier otro color para resaltar el enlace activo */
   }
+
+  /* Estilo para pantallas medianas, como tablets */
+@media (max-width: 768px) {
+  .header-nav li a {
+      font-size: 20px; /* Disminuir el tamaño de la fuente */
+      margin: 0 10px; /* Disminuir el espacio entre elementos */
+  }
+}
+
+/* Estilo para pantallas pequeñas, como teléfonos móviles */
+@media (max-width: 480px) {
+  .header-inner {
+      flex-direction: column; /* Cambia la dirección de los elementos a vertical */
+  }
+
+  .header-logo a {
+      margin-bottom: 10px; /* Añadir margen debajo del logo */
+  }
+
+  .header-nav ul {
+      flex-direction: column; /* Cambia la disposición de los elementos del menú a vertical */
+      align-items: start;
+  }
+
+  .header-nav li {
+      margin: 5px 0; /* Reducir el espacio entre elementos del menú */
+  }
+}
+
+.menu-toggle {
+  display: none; /* Ocultar por defecto */
+  background: none;
+  border: none;
+  color: #fff; /* Cambia al color que prefieras */
+  font-size: 2em;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block; /* Mostrar en pantallas pequeñas */
+  }
+
+  .header-nav {
+      display: none; /* Ocultar el menú por defecto en pantallas pequeñas */
+  }
+
+  .header-nav.open {
+      display: flex;
+      flex-direction: column; /* Asegurarse de que los elementos del menú se muestren en columna */
+      width: 100%; /* Ocupar todo el ancho disponible */
+  }
+
+  .header-nav ul {
+      width: 100%; /* Ocupar todo el ancho disponible */
+  }
+
+  .header-nav li {
+      width: 100%; /* Hacer que cada elemento de la lista ocupe todo el ancho */
+      margin: 0; /* Eliminar márgenes para un mejor ajuste */
+  }
+
+  .header-nav li a {
+      display: block; /* Hacer que los enlaces ocupen todo el ancho del elemento li */
+      padding: 10px; /* Añadir relleno para hacer cada enlace más accesible */
+      text-align: left; /* Alinear el texto a la izquierda */
+      font-size: 18px; /* Ajustar el tamaño de la fuente si es necesario */
+  }
+}
